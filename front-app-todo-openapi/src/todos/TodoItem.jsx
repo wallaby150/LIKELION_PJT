@@ -4,13 +4,17 @@ const TodoItem = ({ todoItem, callbacks }) => {
   const navigate = useNavigate();
 
   let itemClassName = "list-group-item";
-  if (todoItem.done) itemClassName += " list-group-item-success";
+  if (todoItem.done)
+    itemClassName += " list-group-item-success text-decoration-line-through";
 
   return (
     <li className={itemClassName}>
-      <span onClick={() => {}}>
+      <span
+        onClick={() => {
+          callbacks.toggleDone(todoItem.id);
+        }}
+      >
         {todoItem.todo}
-        {todoItem.done ? "(완료)" : ""}
       </span>
       <span
         className="float-end badge bg-secondary pointer m-1"
