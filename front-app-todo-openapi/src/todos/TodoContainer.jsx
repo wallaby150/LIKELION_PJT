@@ -89,7 +89,7 @@ const TodoContainer = () => {
         let index = todoList.findIndex((todo) => todo.id === id);
 
         let newTodoList = produce(todoList, (draft) => {
-          draft[index].splice(index, 1);
+          draft.splice(index, 1);
         });
         setTodoList(newTodoList);
       }
