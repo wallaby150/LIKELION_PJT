@@ -48,15 +48,20 @@ const TodoContainer = () => {
         desc,
         done,
       });
-      if (response.data.states === "success") {
+      if (response.data.status === "success") {
         let index = todoList.findIndex((todo) => todo.id === id);
         let newTodoList = produce(todoList, (draft) => {
           draft[index] = { ...draft[index], todo, desc, done };
         });
         setTodoList(newTodoList);
+        console.log("수정 완료");
+
         callback();
       }
-    } catch (e) {}
+    } catch (e) {
+      if (e instanceof Error) alert("수정 실패 : " + e.message);
+      else alert("수정 실패 : " + e);
+    }
   };
 
   const toggleDone = async (id) => {
