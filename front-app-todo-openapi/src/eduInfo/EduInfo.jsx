@@ -40,7 +40,7 @@ const EduInfo = () => {
 
   return (
     <>
-      <h3>부산시 교육 강좌 현황</h3>
+      <h3 className="text-center">부산시 교육 강좌 현황</h3>
       <br />
       <table className="table table-hover">
         <thead>
