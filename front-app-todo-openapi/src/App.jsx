@@ -6,17 +6,19 @@ import EduInfo from "./eduInfo/EduInfo";
 
 const App = () => {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          {/* Layout 하위에 선언한 것임으로, Home은 Layout의 Outlet에 출력
+    <div style={{ fontFamily: "Noto Sans KR" }}>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            {/* Layout 하위에 선언한 것임으로, Home은 Layout의 Outlet에 출력
         index는 상위조건 , /,와 동일하면 */}
-          <Route index element={<Home />}></Route>
-          <Route path="/todos/*" element={<TodoContainer />} />
-          <Route path="/eduinfo" element={<EduInfo />} />
-        </Route>
-      </Routes>
-    </Router>
+            <Route index element={<Home />}></Route>
+            <Route path="/todos/*" element={<TodoContainer />} />
+            <Route path="/eduinfo" element={<EduInfo />} />
+          </Route>
+        </Routes>
+      </Router>
+    </div>
   );
 };
 
