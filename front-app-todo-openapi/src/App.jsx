@@ -3,6 +3,7 @@ import Layout from "./layout/Layout";
 import Home from "./pages/Home";
 import TodoContainer from "./todos/TodoContainer";
 import EduInfo from "./eduInfo/EduInfo";
+import EatsInfo from "./toeats/EatsInfo";
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
             <Route index element={<Home />}></Route>
             <Route path="/todos/*" element={<TodoContainer />} />
             <Route path="/eduinfo" element={<EduInfo />} />
+            <Route path="/eatsinfo" element={<EatsInfo />} />
           </Route>
         </Routes>
       </Router>

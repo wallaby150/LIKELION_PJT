@@ -7,7 +7,7 @@ const Header = () => {
   let [isNavShow, setIsNavShow] = useState(false);
 
   return (
-    <nav className="navbar navbar-expand-lg bg-body-tertiary">
+    <nav className="navbar navbar-expand-lg bg-body-tertiary mb-3">
       <div className="container-fluid">
         <Link to="/">
           <img
@@ -39,8 +39,8 @@ const Header = () => {
         >
           <ul className="navbar-nav">
             <li className="nav-item">
-              <Link className="nav-link active" aria-current="page" to="/">
-                Home
+              <Link className="nav-link" aria-current="page" to="/">
+                HOME
               </Link>
             </li>
             <li className="nav-item">
@@ -54,8 +54,8 @@ const Header = () => {
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/">
-                MENU1
+              <Link className="nav-link" to="/eatsinfo">
+                EATS INFO
               </Link>
             </li>
           </ul>
