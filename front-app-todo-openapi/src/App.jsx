@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Layout from "./layout/Layout";
 import Home from "./pages/Home";
 import TodoContainer from "./todos/TodoContainer";
+import EduInfo from "./eduInfo/EduInfo";
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
         index는 상위조건 , /,와 동일하면 */}
           <Route index element={<Home />}></Route>
           <Route path="/todos/*" element={<TodoContainer />} />
+          <Route path="/eduinfo" element={<EduInfo />} />
         </Route>
       </Routes>
     </Router>
