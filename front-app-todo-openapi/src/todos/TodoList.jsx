@@ -12,7 +12,11 @@ const TodoList = ({ states, callbacks }) => {
 
       <div className="row">
         <div className="col p-3 d-flex justify-content-end">
-          <Link className="btn btn-primary" to="/todos/add">
+          <Link
+            className="btn fw-bold"
+            style={{ backgroundColor: "#a3ffe0" }}
+            to="/todos/add"
+          >
             할일 추가
           </Link>
         </div>
