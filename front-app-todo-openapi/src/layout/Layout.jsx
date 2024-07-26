@@ -4,8 +4,24 @@ import Header from "./Header";
 const Layout = () => {
   return (
     <div className="container">
-      <Header />
-      <Outlet />
+      <div
+        style={{
+          width: "100vw",
+          display: "grid",
+          placeItems: "center",
+        }}
+      >
+        <div
+          style={{
+            // minWidth: "50vw",
+            // maxWidth: "60vw",
+            width: "50vw",
+          }}
+        >
+          <Header />
+          <Outlet />
+        </div>
+      </div>
     </div>
   );
 };

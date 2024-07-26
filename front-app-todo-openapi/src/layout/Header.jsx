@@ -36,8 +36,11 @@ const Header = () => {
               : "collapse navbar-collapse"
           }
           id="navbarNav"
+          style={{
+            justifyContent: "end",
+          }}
         >
-          <ul className="navbar-nav">
+          <ul className="navbar-nav text-end">
             <li className="nav-item">
               <Link className="nav-link" aria-current="page" to="/">
                 HOME
