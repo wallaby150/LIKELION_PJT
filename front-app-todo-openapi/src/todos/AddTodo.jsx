@@ -22,13 +22,15 @@ const AddTodo = ({ callbacks }) => {
     <>
       <div className="row">
         <div className="col p-3">
-          <h2>할일 추가</h2>
+          <h2 className="text-center">할일 추가</h2>
         </div>
       </div>
       <div className="row">
         <div className="col">
-          <div className="form-group">
-            <label htmlFor="todo">할일</label>
+          <div className="form-group mb-3">
+            <label htmlFor="todo" className="mb-1">
+              할일
+            </label>
             <input
               type="text"
               className="form-control"
@@ -37,8 +39,10 @@ const AddTodo = ({ callbacks }) => {
               onChange={(e) => setTodo(e.target.value)}
             />
           </div>
-          <div className="form-group">
-            <label htmlFor="desc">설명</label>
+          <div className="form-group mb-3">
+            <label htmlFor="desc" className="mb-1">
+              설명
+            </label>
             <textarea
               className="form-control"
               rows={3}
@@ -47,12 +51,12 @@ const AddTodo = ({ callbacks }) => {
               onChange={(e) => setDesc(e.target.value)}
             ></textarea>
           </div>
-          <div className="form-group">
+          <div className="form-group d-flex justify-content-end">
             <button className="btn btn-primary m-1" onClick={addTodoHandler}>
               추가
             </button>
             <button
-              className="btn btn-primary m-1"
+              className="btn btn-secondary m-1"
               onClick={() => navigate("/todos")}
             >
               취소

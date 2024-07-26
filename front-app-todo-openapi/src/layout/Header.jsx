@@ -7,7 +7,7 @@ const Header = () => {
   let [isNavShow, setIsNavShow] = useState(false);
 
   return (
-    <nav className="navbar navbar-expand-lg bg-body-tertiary mb-3">
+    <nav className="navbar navbar-expand-lg bg-body-tertiary mb-5">
       <div className="container-fluid">
         <Link to="/">
           <img

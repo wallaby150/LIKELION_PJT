@@ -16,6 +16,7 @@ const TodoItem = ({ todoItem, callbacks }) => {
           type="checkbox"
           className="me-2"
           checked={todoItem.done}
+          role="button"
           onChange={() => callbacks.toggleDone(todoItem.id)}
         ></input>
 
@@ -23,20 +24,22 @@ const TodoItem = ({ todoItem, callbacks }) => {
       </div>
       <div>
         <span
-          className="float-end badge bg-dark pointer p-2 m-1"
-          onClick={() => {
-            navigate("/todos/edit/" + todoItem.id);
-          }}
-        >
-          편집
-        </span>
-        <span
           className="float-end badge bg-danger pointer p-2 m-1"
+          role="button"
           onClick={() => {
             callbacks.deleteTodo(todoItem.id);
           }}
         >
           삭제
+        </span>
+        <span
+          className="float-end badge bg-dark pointer p-2 m-1"
+          role="button"
+          onClick={() => {
+            navigate("/todos/edit/" + todoItem.id);
+          }}
+        >
+          편집
         </span>
       </div>
     </li>

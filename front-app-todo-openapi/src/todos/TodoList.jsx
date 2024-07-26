@@ -11,7 +11,7 @@ const TodoList = ({ states, callbacks }) => {
       <h3 className="text-center">할일 목록</h3>
 
       <div className="row">
-        <div className="col p-3 d-flex justify-content-end">
+        <div className="col p-3 d-flex justify-content-end" role="button">
           <Link
             className="btn fw-bold"
             style={{ backgroundColor: "#a3ffe0" }}
