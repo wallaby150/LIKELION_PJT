@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import logo from "../assets/logo_mini.png";
 
 const Header = () => {
   // 반응형을 위해서
@@ -8,7 +9,14 @@ const Header = () => {
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
       <div className="container-fluid">
-        <span className="navbar-brand ps-2">Don't Forget</span>
+        <Link to="/">
+          <img
+            src={logo}
+            alt="Don't Forget Logo"
+            className="navbar-brand ps-2"
+            style={{ width: "100px", height: "auto", marginRight: "50px" }}
+          />
+        </Link>
         <button
           onClick={() => setIsNavShow(!isNavShow)}
           className="navbar-toggler"
