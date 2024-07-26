@@ -13,11 +13,12 @@ const TodoItem = ({ todoItem, callbacks }) => {
         onClick={() => {
           callbacks.toggleDone(todoItem.id);
         }}
+        title={todoItem.desc}
       >
         {todoItem.todo}
       </span>
       <span
-        className="float-end badge bg-secondary pointer m-1"
+        className="float-end badge bg-secondary pointer p-2 m-1"
         onClick={() => {
           navigate("/todos/edit/" + todoItem.id);
         }}
@@ -25,7 +26,7 @@ const TodoItem = ({ todoItem, callbacks }) => {
         편집
       </span>
       <span
-        className="float-end badge bg-secondary pointer m-1"
+        className="float-end badge bg-secondary pointer p-2 m-1"
         onClick={() => {
           callbacks.deleteTodo(todoItem.id);
         }}

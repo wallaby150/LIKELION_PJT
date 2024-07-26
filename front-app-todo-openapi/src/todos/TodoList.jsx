@@ -13,7 +13,7 @@ const TodoList = ({ states, callbacks }) => {
       <div className="row">
         <div className="col p-3 d-flex justify-content-end">
           <Link className="btn btn-primary" to="/todos/add">
-            할일추가
+            할일 추가
           </Link>
         </div>
       </div>
