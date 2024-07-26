@@ -25,9 +25,10 @@ const EatsInfo = () => {
     let location = item["ADDR1"];
     let tel = item["CNTCT_TEL"];
     let menus = item["RPRSNTV_MENU"];
+    let desc = item["ITEMCNTNTS"];
 
     return (
-      <tr key={item["UC_SEQ"]}>
+      <tr key={item["UC_SEQ"]} title={desc}>
         <td>{name}</td>
         <td>{menus}</td>
         <td>{location}</td>
